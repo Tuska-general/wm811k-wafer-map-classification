@@ -1,0 +1,10 @@
+# 가상환경
+.venv/
+
+# 이미지 데이터와 압축 파일 (용량이 크고 원본 그대로 보관)
+WM811k Dataset/
+*.zip
+
+# 파이썬 캐시와 Windows 다운로드 흔적 파일
+__pycache__/
+*:Zone.Identifier
