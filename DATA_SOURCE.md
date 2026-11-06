@@ -1,6 +1,6 @@
 # 데이터 출처 (DATA_SOURCE)
 
-> 마지막 확인: 2026-11-06 (4차 갱신). 표의 숫자는 로컬 파일을 직접 세거나 읽어서 확인한 값이에요.
+> 마지막 확인: 2026-11-06 (5차 갱신: 원본 사본 보관 위치와 해시 추가). 표의 숫자는 로컬 파일을 직접 세거나 읽어서 확인한 값이에요.
 > 확인하지 못한 항목은 "확인 필요"로 남겨 뒀어요.
 
 ## 1. 데이터 이름
@@ -44,6 +44,18 @@ WM-811K 웨이퍼 맵 이미지 (9개 유형, 902장 서브셋)
   - Muhammad Junayed, Tanzeem Tahmeed Reza, Md. Saiful Islam, "Enhancing Defect Recognition: Convolutional Neural Networks for Silicon Wafer Map Analysis," 2024 3rd ICAEEE, pp. 1-6, 2024.
   - DOI: 10.1109/ICAEEE62219.2024.10561853
   - 올린 사람의 GitHub 저장소: https://github.com/MD-Junayed000/WM811k-Silicon-Wafer-Map-Dataset-and-Defect-Detection-Using-CNNs-with-Grad-CAM (`WM811k_Dataset.rar`, `grad.m`, MATLAB 노트북, README에 논문 PDF 링크)
+
+### 4-1. 프로젝트에 보관한 원본 사본
+
+- 받은 곳: 인터넷 아카이브에 2022-06-17 저장된 `MIR-WM811K.zip`
+  - 주소: http://web.archive.org/web/20220617223043/http://mirlab.org/dataSet/public/MIR-WM811K.zip
+- 받은 날짜: 2026-11-06 (파일 수정 시각 15:52 KST)
+- 보관 위치: `data/raw/MIR-WM811K.zip`
+  - 크기: 344,542,743바이트
+  - SHA-256: `81431a81ceac0e96caef08f50aaecc4970edc56e7df7703ee17fb9e321853eef`
+- 압축은 `Python/` 폴더만 풀었어요: `data/raw/MIR-WM811K/Python/`(`WM811K.pkl`, `example.py`, `readme.txt`, `screenshot_Python.jpg`, 합계 2,023,238,576바이트). MATLAB용 `WM811K.mat`은 쓰지 않아서 풀지 않았어요.
+- `data/raw/`는 용량이 크고, 원본 조건(5절)상 재배포할 때는 저작권 문구를 함께 넣어야 해서 git에 올리지 않아요(`.gitignore`).
+- 902장과 원본 행의 대조는 `scripts/00_source_check.py`로 다시 할 수 있어요. 결과는 `data/wafer_lot_map.csv`(파일별 원본 행 번호, lotName, waferIndex)와 `results/00_source_check_summary.txt`에 있어요.
 
 ## 5. 라이선스
 
