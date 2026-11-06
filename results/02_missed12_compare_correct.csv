@@ -1,0 +1,19 @@
+file,true,why_none,bg_px,normal_px,defect_px,defect_ratio,max_t,blur_candidates_px,corr_none,best_other,corr_best_other,corr_true,margin_none_minus_other
+Center/646177.jpg,Center,correct,206,778,40,4.89,0.873,144,-0.0086,Center,0.3645,0.3645,-0.373
+Center/691371.jpg,Center,correct,221,798,5,0.623,0.606,62,0.0139,Center,0.1192,0.1192,-0.1053
+Center/723088.jpg,Center,correct,196,756,72,8.696,0.913,142,0.1157,Center,0.4992,0.4992,-0.3835
+Donut/679360.jpg,Donut,correct,228,583,213,26.759,1.094,115,-0.0444,Donut,0.7307,0.7307,-0.7752
+Donut/680244.jpg,Donut,correct,226,643,155,19.424,1.052,157,-0.0603,Donut,0.6371,0.6371,-0.6974
+Donut/680898.jpg,Donut,correct,222,653,149,18.579,1.016,129,-0.0703,Donut,0.617,0.617,-0.6873
+Edge Local/809910.jpg,Edge Local,correct,234,729,61,7.722,0.963,68,0.188,Edge Local,0.379,0.379,-0.1911
+Edge Local/809927.jpg,Edge Local,correct,230,765,29,3.652,0.954,44,0.1729,Edge Local,0.2568,0.2568,-0.0838
+Edge Local/810092.jpg,Edge Local,correct,241,643,140,17.88,1.085,72,-0.0453,Edge Local,0.3996,0.3996,-0.445
+Edge Ring/643353.jpg,Edge Ring,correct,205,735,84,10.256,0.948,120,0.168,Edge Ring,0.4779,0.4779,-0.3099
+Edge Ring/643685.jpg,Edge Ring,correct,202,753,69,8.394,0.877,94,0.1627,Edge Ring,0.4518,0.4518,-0.2891
+Edge Ring/645383.jpg,Edge Ring,correct,209,703,112,13.742,1.023,105,0.1251,Edge Ring,0.4823,0.4823,-0.3573
+Local/776217.jpg,Local,correct,253,749,22,2.853,0.679,135,0.0757,Local,0.1304,0.1304,-0.0548
+Local/781566.jpg,Local,correct,244,777,3,0.385,0.586,22,-0.0107,Local,0.0316,0.0316,-0.0423
+Local/787895.jpg,Local,correct,223,796,5,0.624,0.761,35,0.0277,Local,0.0435,0.0435,-0.0157
+Scratch/801122.jpg,Scratch,correct,259,749,16,2.092,0.908,31,0.0958,Scratch,0.137,0.137,-0.0412
+Scratch/802191.jpg,Scratch,correct,264,743,17,2.237,0.707,91,0.0367,Scratch,0.1504,0.1504,-0.1136
+Scratch/806914.jpg,Scratch,correct,220,791,13,1.617,0.695,91,0.1393,Scratch,0.2419,0.2419,-0.1026
