@@ -1,0 +1,29 @@
+테스트 정확도: 0.6605 (179/271)
+near full 임계값: 73.5% (학습셋 판별 정확도 1.0000, 동점 값 10개: 73.5~78.0)
+
+              precision    recall  f1-score   support
+
+      Center      0.647     0.733     0.688        30
+       Donut      0.788     0.839     0.812        31
+  Edge Local      0.486     0.581     0.529        31
+   Edge Ring      0.571     0.903     0.700        31
+       Local      0.800     0.133     0.229        30
+     Scratch      0.571     0.267     0.364        30
+   near full      0.903     1.000     0.949        28
+        none      0.700     0.933     0.800        30
+      random      0.607     0.567     0.586        30
+
+    accuracy                          0.661       271
+   macro avg      0.675     0.662     0.629       271
+weighted avg      0.673     0.661     0.627       271
+
+혼동행렬 (행=정답, 열=예측, 순서=[np.str_('Center'), np.str_('Donut'), np.str_('Edge Local'), np.str_('Edge Ring'), np.str_('Local'), np.str_('Scratch'), np.str_('near full'), np.str_('none'), np.str_('random')])
+[[22  1  0  1  1  2  0  3  0]
+ [ 0 26  0  0  0  0  0  1  4]
+ [ 0  0 18  8  0  2  0  2  1]
+ [ 1  0  0 28  0  1  0  1  0]
+ [ 1  4  9  4  4  1  0  2  5]
+ [ 4  1  7  6  0  8  0  3  1]
+ [ 0  0  0  0  0  0 28  0  0]
+ [ 0  0  0  2  0  0  0 28  0]
+ [ 6  1  3  0  0  0  3  0 17]]
