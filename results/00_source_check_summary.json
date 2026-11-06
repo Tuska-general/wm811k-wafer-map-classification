@@ -1,0 +1,112 @@
+{
+  "zip": {
+    "path": "data/raw/MIR-WM811K.zip",
+    "size": 344542743,
+    "sha256": "81431a81ceac0e96caef08f50aaecc4970edc56e7df7703ee17fb9e321853eef"
+  },
+  "source_rows": 811457,
+  "source_type_counts": {
+    "none": 147431,
+    "Loc": 3593,
+    "(라벨 없음)": 638507,
+    "Edge-Loc": 5189,
+    "Center": 4294,
+    "Edge-Ring": 9680,
+    "Scratch": 1193,
+    "Random": 866,
+    "Near-full": 149,
+    "Donut": 555
+  },
+  "matched_images": 902,
+  "problems": [],
+  "per_type": {
+    "Center": {
+      "images": 100,
+      "lots": 93,
+      "top_lot": "lot47443",
+      "top_lot_images": 3,
+      "splits": {
+        "Test": 100
+      }
+    },
+    "Donut": {
+      "images": 102,
+      "lots": 78,
+      "top_lot": "lot42370",
+      "top_lot_images": 5,
+      "splits": {
+        "Test": 102
+      }
+    },
+    "Edge Local": {
+      "images": 103,
+      "lots": 42,
+      "top_lot": "lot47466",
+      "top_lot_images": 8,
+      "splits": {
+        "Test": 103
+      }
+    },
+    "Edge Ring": {
+      "images": 102,
+      "lots": 52,
+      "top_lot": "lot45615",
+      "top_lot_images": 15,
+      "splits": {
+        "Test": 102
+      }
+    },
+    "Local": {
+      "images": 100,
+      "lots": 91,
+      "top_lot": "lot46106",
+      "top_lot_images": 3,
+      "splits": {
+        "Test": 100
+      }
+    },
+    "Scratch": {
+      "images": 100,
+      "lots": 88,
+      "top_lot": "lot47495",
+      "top_lot_images": 3,
+      "splits": {
+        "Test": 100
+      }
+    },
+    "near full": {
+      "images": 95,
+      "lots": 83,
+      "top_lot": "lot45243",
+      "top_lot_images": 4,
+      "splits": {
+        "Test": 95
+      }
+    },
+    "none": {
+      "images": 100,
+      "lots": 6,
+      "top_lot": "lot45343",
+      "top_lot_images": 21,
+      "splits": {
+        "Test": 100
+      }
+    },
+    "random": {
+      "images": 100,
+      "lots": 55,
+      "top_lot": "lot46104",
+      "top_lot_images": 18,
+      "splits": {
+        "Test": 100
+      }
+    }
+  },
+  "total_lots": 520,
+  "lots_by_number_of_types": {
+    "1": 461,
+    "2": 52,
+    "3": 5,
+    "4": 2
+  }
+}

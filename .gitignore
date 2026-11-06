@@ -8,3 +8,6 @@ WM811k Dataset/
 # 파이썬 캐시와 Windows 다운로드 흔적 파일
 __pycache__/
 *:Zone.Identifier
+
+# 원본 WM-811K (용량이 커서 git에 올리지 않음)
+data/raw/

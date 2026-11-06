@@ -1,0 +1,22 @@
+00_source_check: 원본 WM-811K와 902장 서브셋 대조
+원본 zip: data/raw/MIR-WM811K.zip
+  크기 344,542,743바이트 (예상 344,542,743), SHA-256 81431a81ceac0e96caef08f50aaecc4970edc56e7df7703ee17fb9e321853eef
+  출처 http://web.archive.org/web/20220617223043/http://mirlab.org/dataSet/public/MIR-WM811K.zip
+원본 행 수: 811,457
+원본 유형별 행 수: (라벨 없음) 638,507 / none 147,431 / Edge-Ring 9,680 / Edge-Loc 5,189 / Center 4,294 / Loc 3,593 / Scratch 1,193 / Random 866 / Donut 555 / Near-full 149
+대조된 이미지: 902장, 문제 0건
+
+유형별 lot 개수 (서브셋 기준)
+유형              장수   lot 수  최다 lot (장수)  원본 분할
+Center         100      93  lot47443 (3)  {'Test': 100}
+Donut          102      78  lot42370 (5)  {'Test': 102}
+Edge Local     103      42  lot47466 (8)  {'Test': 103}
+Edge Ring      102      52  lot45615 (15)  {'Test': 102}
+Local          100      91  lot46106 (3)  {'Test': 100}
+Scratch        100      88  lot47495 (3)  {'Test': 100}
+near full       95      83  lot45243 (4)  {'Test': 95}
+none           100       6  lot45343 (21)  {'Test': 100}
+random         100      55  lot46104 (18)  {'Test': 100}
+
+서로 다른 lot 전체: 520개
+lot 하나에 들어 있는 유형 수별 lot 개수: {'1': 461, '2': 52, '3': 5, '4': 2}
