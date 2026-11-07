@@ -1,0 +1,13 @@
+file,true,B_03,edge_only,order_only,B_aug,aug_n_blobs,aug_largest_ratio,aug_elongation_capped
+Center/773253.jpg,Center,Local,Local,Local,Local,0,0.0,0.0
+Scratch/809507.jpg,Scratch,Local,Local,Local,Local,2,0.5,0.0
+Center/776169.jpg,Center,Local,Local,Local,Local,3,0.5,50.0
+Center/761994.jpg,Center,Center,Center,Center,Center,5,0.615,2.27
+Edge Ring/766504.jpg,Edge Ring,none,Scratch,none,none,7,0.211,6.17
+Scratch/801807.jpg,Scratch,none,none,none,none,6,0.368,3.41
+Edge Local/810215.jpg,Edge Local,Edge Ring,Edge Local,Edge Ring,Edge Ring,6,0.467,8.44
+Local/792182.jpg,Local,Scratch,Scratch,Scratch,Scratch,12,0.452,1.79
+Donut/758427.jpg,Donut,Scratch,Scratch,Scratch,Scratch,19,0.235,2.09
+Edge Local/810592.jpg,Edge Local,Edge Local,Edge Local,Edge Local,Edge Local,8,0.729,1.79
+Local/791996.jpg,Local,random,random,random,random,13,0.61,2.07
+Scratch/807903.jpg,Scratch,random,random,random,random,23,0.221,3.7

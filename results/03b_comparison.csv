@@ -1,0 +1,15 @@
+metric,B_03,edge_only,order_only,B_aug
+edge_case_handling,03,aug,03,aug
+feature_order,03,03,aug,aug
+accuracy,0.7749,0.7786,0.7970,0.7934
+correct_of_271,210,211,216,215
+F1_Center,0.717,0.731,0.778,0.755
+F1_Donut,0.857,0.857,0.839,0.871
+F1_Edge Local,0.821,0.842,0.862,0.862
+F1_Edge Ring,0.889,0.903,0.903,0.903
+F1_Local,0.562,0.562,0.571,0.594
+F1_Scratch,0.576,0.559,0.594,0.585
+F1_near full,0.949,0.949,0.949,0.949
+F1_none,0.857,0.852,0.897,0.857
+F1_random,0.774,0.794,0.806,0.794
+macro_F1,0.778,0.783,0.800,0.797

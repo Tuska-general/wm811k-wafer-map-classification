@@ -1,0 +1,13 @@
+rank,feature,importance
+1,defect_ratio,0.1463
+2,corr_Edge Ring,0.1362
+3,corr_none,0.1113
+4,corr_Local,0.0975
+5,corr_Center,0.0972
+6,corr_random,0.0904
+7,corr_Donut,0.0852
+8,corr_Edge Local,0.0784
+9,corr_Scratch,0.0689
+10,n_blobs,0.0373
+11,largest_blob_ratio,0.0285
+12,largest_blob_elongation,0.0228
