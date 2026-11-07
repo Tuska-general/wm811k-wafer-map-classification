@@ -1,0 +1,86 @@
+===== baseline =====
+정확도 0.6605 (179/271)
+              precision    recall  f1-score   support
+
+      Center      0.647     0.733     0.688        30
+       Donut      0.788     0.839     0.812        31
+  Edge Local      0.486     0.581     0.529        31
+   Edge Ring      0.571     0.903     0.700        31
+       Local      0.800     0.133     0.229        30
+     Scratch      0.571     0.267     0.364        30
+   near full      0.903     1.000     0.949        28
+        none      0.700     0.933     0.800        30
+      random      0.607     0.567     0.586        30
+
+    accuracy                          0.661       271
+   macro avg      0.675     0.662     0.629       271
+weighted avg      0.673     0.661     0.627       271
+
+혼동행렬 (행=정답, 열=예측, 순서=[np.str_('Center'), np.str_('Donut'), np.str_('Edge Local'), np.str_('Edge Ring'), np.str_('Local'), np.str_('Scratch'), np.str_('near full'), np.str_('none'), np.str_('random')])
+[[22  1  0  1  1  2  0  3  0]
+ [ 0 26  0  0  0  0  0  1  4]
+ [ 0  0 18  8  0  2  0  2  1]
+ [ 1  0  0 28  0  1  0  1  0]
+ [ 1  4  9  4  4  1  0  2  5]
+ [ 4  1  7  6  0  8  0  3  1]
+ [ 0  0  0  0  0  0 28  0  0]
+ [ 0  0  0  2  0  0  0 28  0]
+ [ 6  1  3  0  0  0  3  0 17]]
+
+===== A =====
+정확도 0.7749 (210/271)
+              precision    recall  f1-score   support
+
+      Center      0.833     0.667     0.741        30
+       Donut      0.900     0.871     0.885        31
+  Edge Local      0.852     0.742     0.793        31
+   Edge Ring      0.903     0.903     0.903        31
+       Local      0.541     0.667     0.597        30
+     Scratch      0.514     0.600     0.554        30
+   near full      0.903     1.000     0.949        28
+        none      0.923     0.800     0.857        30
+      random      0.733     0.733     0.733        30
+
+    accuracy                          0.775       271
+   macro avg      0.789     0.776     0.779       271
+weighted avg      0.789     0.775     0.779       271
+
+혼동행렬 (행=정답, 열=예측, 순서=[np.str_('Center'), np.str_('Donut'), np.str_('Edge Local'), np.str_('Edge Ring'), np.str_('Local'), np.str_('Scratch'), np.str_('near full'), np.str_('none'), np.str_('random')])
+[[20  1  0  0  6  3  0  0  0]
+ [ 0 27  0  0  0  1  0  0  3]
+ [ 0  0 23  2  2  1  0  0  3]
+ [ 1  0  0 28  0  1  0  1  0]
+ [ 0  1  1  0 20  7  0  0  1]
+ [ 2  0  0  0  8 18  0  1  1]
+ [ 0  0  0  0  0  0 28  0  0]
+ [ 0  0  0  1  1  4  0 24  0]
+ [ 1  1  3  0  0  0  3  0 22]]
+
+===== B =====
+정확도 0.7749 (210/271)
+              precision    recall  f1-score   support
+
+      Center      0.826     0.633     0.717        30
+       Donut      0.844     0.871     0.857        31
+  Edge Local      0.920     0.742     0.821        31
+   Edge Ring      0.875     0.903     0.889        31
+       Local      0.529     0.600     0.562        30
+     Scratch      0.528     0.633     0.576        30
+   near full      0.903     1.000     0.949        28
+        none      0.923     0.800     0.857        30
+      random      0.750     0.800     0.774        30
+
+    accuracy                          0.775       271
+   macro avg      0.789     0.776     0.778       271
+weighted avg      0.789     0.775     0.778       271
+
+혼동행렬 (행=정답, 열=예측, 순서=[np.str_('Center'), np.str_('Donut'), np.str_('Edge Local'), np.str_('Edge Ring'), np.str_('Local'), np.str_('Scratch'), np.str_('near full'), np.str_('none'), np.str_('random')])
+[[19  1  0  0  5  4  0  0  1]
+ [ 0 27  0  0  0  1  0  0  3]
+ [ 0  0 23  3  2  1  0  0  2]
+ [ 1  0  0 28  1  0  0  1  0]
+ [ 0  3  1  0 18  7  0  0  1]
+ [ 2  0  0  0  7 19  0  1  1]
+ [ 0  0  0  0  0  0 28  0  0]
+ [ 0  0  0  1  1  4  0 24  0]
+ [ 1  1  1  0  0  0  3  0 24]]

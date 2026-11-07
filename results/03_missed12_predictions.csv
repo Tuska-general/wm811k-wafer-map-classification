@@ -1,0 +1,13 @@
+file,true,defect_px,baseline,A,B,n_blobs,largest_blob_ratio,elongation,shape_case
+Center/773253.jpg,Center,0,none,Local,Local,0,0.0,1.0,no_defect
+Scratch/809507.jpg,Scratch,2,none,Local,Local,2,0.5,1.0,single_pixel
+Center/776169.jpg,Center,6,none,Local,Local,3,0.5,50.0,line
+Center/761994.jpg,Center,13,none,Center,Center,5,0.615,2.27,normal
+Edge Ring/766504.jpg,Edge Ring,19,none,none,none,7,0.211,6.17,normal
+Scratch/801807.jpg,Scratch,19,none,none,none,6,0.368,3.41,normal
+Edge Local/810215.jpg,Edge Local,30,none,Edge Ring,Edge Ring,6,0.467,8.44,normal
+Local/792182.jpg,Local,31,none,Scratch,Scratch,12,0.452,1.79,normal
+Donut/758427.jpg,Donut,34,none,Scratch,Scratch,19,0.235,2.09,normal
+Edge Local/810592.jpg,Edge Local,70,none,Edge Local,Edge Local,8,0.729,1.79,normal
+Local/791996.jpg,Local,77,none,random,random,13,0.61,2.07,normal
+Scratch/807903.jpg,Scratch,86,none,random,random,23,0.221,3.7,normal

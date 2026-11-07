@@ -1,0 +1,14 @@
+metric,baseline,A,B
+accuracy,0.6605,0.7749,0.7749
+correct_of_271,179,210,210
+august_reported_accuracy,0.661,0.775,0.793
+F1_Center,0.688,0.741,0.717
+F1_Donut,0.812,0.885,0.857
+F1_Edge Local,0.529,0.793,0.821
+F1_Edge Ring,0.700,0.903,0.889
+F1_Local,0.229,0.597,0.562
+F1_Scratch,0.364,0.554,0.576
+F1_near full,0.949,0.949,0.949
+F1_none,0.800,0.857,0.857
+F1_random,0.586,0.733,0.774
+macro_F1,0.629,0.779,0.778
