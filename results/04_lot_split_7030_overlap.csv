@@ -1,0 +1,11 @@
+type,test_n,shared_lot_n,shared_pct,test_lots,test_lots_in_train
+Center,30,12,40.0,30,12
+Donut,31,9,29.0,30,9
+Edge Local,31,22,71.0,22,16
+Edge Ring,31,18,58.1,20,7
+Local,30,2,6.7,28,2
+Scratch,30,10,33.3,30,10
+near full,28,8,28.6,28,8
+none,30,30,100.0,6,6
+random,30,20,66.7,17,7
+전체,271,131,48.3,200,70
