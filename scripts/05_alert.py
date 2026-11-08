@@ -29,6 +29,7 @@
 실행
   전체:      .venv/bin/python scripts/05_alert.py
   파일 1장:  .venv/bin/python scripts/05_alert.py --image 경로 [--out 카드.png]
+  한글 카드:  위 두 명령에 --lang ko (맑은 고딕, 전체 실행이면 results/05_alert_cards_ko/)
              (32x32 이미지만 받는다. 기본 저장 위치 results/05_alert_single/<파일이름>.png)
 """
 
@@ -60,6 +61,49 @@ NEW_FOLD = 0  # 규칙: 9개 유형이 모두 든 fold 중 가장 앞 번호
 REVIEW_PROB = 0.5
 TOP_K = 3
 CORR_UNDEFINED = -1.0
+
+# 한글 카드(--lang ko): 맑은 고딕을 matplotlib 글꼴로 등록해서 쓴다. 영어 카드와 따로 저장.
+CARD_DIR_KO = RESULTS_DIR / "05_alert_cards_ko"
+KO_FONT_FILES = [Path("/mnt/c/Windows/Fonts/malgun.ttf"), Path("/mnt/c/Windows/Fonts/malgunbd.ttf")]
+
+# 카드 문구 (판정 값은 언어와 상관없이 같다)
+TEXT = {
+    "en": dict(
+        title="Wafer map alert card", new="NEW WAFER", true="true", in_past=" (in past data!)",
+        anomaly="ANOMALY MAP", normal="NORMAL (none)", urgent="URGENT (near full)",
+        review="NEEDS HUMAN REVIEW (top-1 prob < 0.5)", mono=True,
+        lines=["Predicted type : {pred}   (p = {p1:.2f})", "2nd candidate  : {pred2}   (p = {p2:.2f})", "",
+               "Defect area    : {ratio:.1f}%  (near full threshold {thr:.1f}%, reference only)",
+               "Defect pixels  : {nd}", "",
+               "Model: RandomForest (B features), trained on past data",
+               "       = lot-split folds except fold {fold} ({npast} wafers)"],
+        similar="Similar #{k}: {type}", wafer="wafer", corr="mask corr = {v}", undefined="n/a (undefined)"),
+    "ko": dict(
+        title="웨이퍼 맵 알림 카드", new="새 웨이퍼", true="정답", in_past=" (과거 데이터에 있음!)",
+        anomaly="특이맵", normal="정상 (none)", urgent="긴급 (near full)",
+        review="사람 확인 필요 (1위 확률 < 0.5)", mono=False,
+        lines=["예상 유형: {pred}  (확률 {p1:.2f})", "2위 후보: {pred2}  (확률 {p2:.2f})", "",
+               "결함 면적: {ratio:.1f}%  (near full 임계값 {thr:.1f}%, 참고용)",
+               "결함 픽셀: {nd}개", "",
+               "모델: RandomForest (B 특징), 과거 데이터로 학습",
+               "         = lot 분할에서 fold {fold}을 뺀 {npast}장"],
+        similar="비슷한 과거 맵 {k}: {type}", wafer="웨이퍼", corr="마스크 상관계수 = {v}", undefined="계산 불가"),
+}
+
+
+def setup_font(lang):
+    """ko면 맑은 고딕을 등록한다. 파일이 없으면 다른 글꼴로 바꾸지 않고 멈춘다(글자 깨짐 방지)."""
+    if lang != "ko":
+        return
+    from matplotlib import font_manager
+    missing = [str(p) for p in KO_FONT_FILES if not p.exists()]
+    if missing:
+        raise SystemExit(f"한글 글꼴 파일이 없어요: {missing}")
+    for p in KO_FONT_FILES:
+        font_manager.fontManager.addfont(str(p))
+    name = font_manager.FontProperties(fname=str(KO_FONT_FILES[0])).get_name()
+    plt.rcParams["font.family"] = name
+    plt.rcParams["axes.unicode_minus"] = False
 
 
 def _load(name, filename):
@@ -171,23 +215,24 @@ def draw_map(ax, img, title, color="black"):
     ax.set_yticks([])
 
 
-def draw_card(new_img, alert, sysd, header, out_path, past_images):
+def draw_card(new_img, alert, sysd, header, out_path, past_images, lang="en"):
+    T = TEXT[lang]
     fig = plt.figure(figsize=(11, 6.6))
     gs = fig.add_gridspec(2, 3, height_ratios=[1.25, 1], hspace=0.35, wspace=0.15)
 
     ax0 = fig.add_subplot(gs[0, 0])
-    draw_map(ax0, new_img, "NEW WAFER\n" + header, "black")
+    draw_map(ax0, new_img, T["new"] + "\n" + header, "black")
 
     # 상태 배지와 정보 텍스트
     ax1 = fig.add_subplot(gs[0, 1:])
     ax1.axis("off")
     badges = []
-    badges.append(("ANOMALY MAP" if alert["anomaly"] else "NORMAL (none)",
+    badges.append((T["anomaly"] if alert["anomaly"] else T["normal"],
                    "#c0392b" if alert["anomaly"] else "#27ae60"))
     if alert["urgent"]:
-        badges.append(("URGENT (near full)", "#8e0000"))
+        badges.append((T["urgent"], "#8e0000"))
     if alert["review"]:
-        badges.append(("NEEDS HUMAN REVIEW (top-1 prob < 0.5)", "#d68910"))
+        badges.append((T["review"], "#d68910"))
     x = 0.0
     for text, color in badges:
         t = ax1.text(x, 0.93, f" {text} ", fontsize=11, color="white", weight="bold",
@@ -196,27 +241,20 @@ def draw_card(new_img, alert, sysd, header, out_path, past_images):
         fig.canvas.draw()
         bb = t.get_window_extent().transformed(ax1.transAxes.inverted())
         x = bb.x1 + 0.05
-    lines = [
-        f"Predicted type : {alert['pred']}   (p = {alert['prob1']:.2f})",
-        f"2nd candidate  : {alert['pred2']}   (p = {alert['prob2']:.2f})",
-        "",
-        f"Defect area    : {alert['ratio']:.1f}%  "
-        f"(near full threshold {sysd['threshold']:.1f}%, reference only)",
-        f"Defect pixels  : {alert['n_defect']}",
-        "",
-        "Model: RandomForest (B features), trained on past data",
-        f"       = lot-split folds except fold {NEW_FOLD} ({len(sysd['past'])} wafers)",
-    ]
-    ax1.text(0.0, 0.78, "\n".join(lines), fontsize=10.5, family="monospace", va="top",
-             transform=ax1.transAxes)
+    vals = dict(pred=alert["pred"], p1=alert["prob1"], pred2=alert["pred2"], p2=alert["prob2"],
+                ratio=alert["ratio"], thr=sysd["threshold"], nd=alert["n_defect"],
+                fold=NEW_FOLD, npast=len(sysd["past"]))
+    lines = [s.format(**vals) for s in T["lines"]]
+    ax1.text(0.0, 0.78, "\n".join(lines), fontsize=10.5, va="top", transform=ax1.transAxes,
+             **({"family": "monospace"} if T["mono"] else {"linespacing": 1.5}))
 
     for k, nb in enumerate(alert["neighbors"]):
         ax = fig.add_subplot(gs[1, k])
-        sim_txt = "n/a (undefined)" if nb["undefined"] else f"{nb['corr']:.3f}"
+        sim_txt = T["undefined"] if nb["undefined"] else f"{nb['corr']:.3f}"
         draw_map(ax, past_images[nb["idx"]],
-                 f"Similar #{k + 1}: {nb['type']}\n{nb['lot']}  wafer {nb['wafer']}\n"
-                 f"mask corr = {sim_txt}")
-    fig.suptitle("Wafer map alert card", fontsize=13, weight="bold", x=0.02, ha="left")
+                 T["similar"].format(k=k + 1, type=nb["type"]) + f"\n{nb['lot']}  {T['wafer']} {nb['wafer']}\n"
+                 + T["corr"].format(v=sim_txt))
+    fig.suptitle(T["title"], fontsize=13, weight="bold", x=0.02, ha="left")
     out_path.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(out_path, dpi=130, bbox_inches="tight")
     plt.close(fig)
@@ -228,7 +266,7 @@ def load_images(paths):
 
 # ---------------- 실행 모드 ----------------
 
-def run_single(image_path, out_path):
+def run_single(image_path, out_path, lang="en"):
     image_path = Path(image_path)
     img = np.asarray(Image.open(image_path).convert("RGB"), dtype=np.float64)
     if img.shape[:2] != (32, 32):
@@ -247,12 +285,13 @@ def run_single(image_path, out_path):
         rel = None
     note = ""
     if rel is not None and rel in set(sysd["files"][sysd["past"]]):
-        note = " (in past data!)"
+        note = TEXT[lang]["in_past"]
         print(f"주의: {rel}은 과거 데이터에 들어 있는 파일이라, 자기 자신이 비슷한 맵으로 나올 수 있어요.")
 
     past_images = load_images(sysd["paths"])
-    out = Path(out_path) if out_path else SINGLE_DIR / f"{image_path.stem}.png"
-    draw_card(img, alert, sysd, f"{image_path.name}{note}", out, past_images)
+    suffix = "" if lang == "en" else f"_{lang}"
+    out = Path(out_path) if out_path else SINGLE_DIR / f"{image_path.stem}{suffix}.png"
+    draw_card(img, alert, sysd, f"{image_path.name}{note}", out, past_images, lang)
     print_alert(image_path.name, alert)
     print(f"카드 저장: {out}")
 
@@ -269,7 +308,7 @@ def print_alert(name, a):
               f"상관 {nb['corr']:.3f})")
 
 
-def run_all():
+def run_all(lang="en"):
     sysd = build_system()
     new, labels, cn = sysd["new"], sysd["labels"], sysd["class_names"]
     alerts = make_alerts(sysd["masks"][new], sysd["ratios"][new], sysd)
@@ -347,6 +386,10 @@ def run_all():
           + f", 나머지 {metrics['accuracy_when_confident']:.1%})",
           f"- 긴급(near full 예상): {metrics['urgent_n']}장, 그중 정답 near full {metrics['urgent_true_near_full']}장",
           f"- 유사도 계산 불가(-1.0)가 3장 안에 낀 웨이퍼: {metrics['wafers_with_undefined_similarity']}장", "",
+          "정한 해석 (2026-11-08 사용자 확인, 이 결과로 확정):",
+          "- near full 예상 = RandomForest 1위가 near full. near full 임계값은 카드에 참고로만 표시",
+          "- 카드 9장 = 정답 유형마다 새 웨이퍼 중 파일 순서 첫 장",
+          "- 마스크 값이 모두 같아 상관계수를 구할 수 없으면 -1.0 (03 규칙)", "",
           "| 유형 | 장수 | recall | precision | F1 | 비슷한 3장 중 같은 유형 | 1위 맵 같은 유형 |",
           "|---|---:|---:|---:|---:|---:|---:|"]
     for c in cn:
@@ -361,9 +404,10 @@ def run_all():
         i = int(np.where(y_true == c)[0][0])
         g = new[i]
         name = sysd["files"][g]
-        header = f"{name}\n{sysd['lots'][g]}  wafer {sysd['wafer_idx'][g]}  (true: {c})"
-        out = CARD_DIR / f"{c.replace(' ', '_')}_{Path(name).stem}.png"
-        draw_card(images[g], alerts[i], sysd, header, out, images)
+        T = TEXT[lang]
+        header = f"{name}\n{sysd['lots'][g]}  {T['wafer']} {sysd['wafer_idx'][g]}  ({T['true']}: {c})"
+        out = (CARD_DIR if lang == "en" else CARD_DIR_KO) / f"{c.replace(' ', '_')}_{Path(name).stem}.png"
+        draw_card(images[g], alerts[i], sysd, header, out, images, lang)
         print_alert(name, alerts[i])
 
     print("\n" + "\n".join(md))
@@ -373,12 +417,15 @@ def run_all():
 def main():
     ap = argparse.ArgumentParser(description="웨이퍼 맵 알림 카드")
     ap.add_argument("--image", help="이미지 1장 경로 (32x32). 없으면 새 웨이퍼 fold 전체 실행")
-    ap.add_argument("--out", help="--image 카드 저장 경로 (기본 results/05_alert_single/<이름>.png)")
+    ap.add_argument("--out", help="--image 카드 저장 경로 (기본 results/05_alert_single/<이름>[_ko].png)")
+    ap.add_argument("--lang", choices=["en", "ko"], default="en",
+                    help="카드 글자 언어. ko는 맑은 고딕 사용, 전체 실행 시 results/05_alert_cards_ko/에 저장")
     args = ap.parse_args()
+    setup_font(args.lang)
     if args.image:
-        run_single(args.image, args.out)
+        run_single(args.image, args.out, args.lang)
     else:
-        run_all()
+        run_all(args.lang)
 
 
 if __name__ == "__main__":
