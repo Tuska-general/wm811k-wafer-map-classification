@@ -1,0 +1,251 @@
+lotName,waferIndex,source_row,original_label,type,trainTestLabel,in_902,file_name,pred_type_05
+lot42358,1,683653,Edge-Loc,Edge Local,Test,0,,
+lot42358,2,683654,Edge-Loc,Edge Local,Test,0,,
+lot42358,3,683655,none,none,Test,0,,
+lot42358,4,683656,none,none,Test,0,,
+lot42358,5,683657,none,none,Test,0,,
+lot42358,6,683658,none,none,Test,0,,
+lot42358,7,683659,Edge-Loc,Edge Local,Test,0,,
+lot42358,8,683660,none,none,Test,0,,
+lot42358,9,683661,none,none,Test,0,,
+lot42358,10,683662,none,none,Test,0,,
+lot42358,11,683663,Edge-Loc,Edge Local,Test,0,,
+lot42358,12,683664,none,none,Test,0,,
+lot42358,13,683665,Edge-Loc,Edge Local,Test,0,,
+lot42358,14,683666,none,none,Test,0,,
+lot42358,15,683667,none,none,Test,0,,
+lot42358,16,683668,Edge-Loc,Edge Local,Test,0,,
+lot42358,17,683669,none,none,Test,0,,
+lot42358,18,683670,none,none,Test,0,,
+lot42358,19,683671,Scratch,Scratch,Test,0,,
+lot42358,20,683672,Edge-Loc,Edge Local,Test,0,,
+lot42358,21,683673,none,none,Test,0,,
+lot42358,22,683674,Donut,Donut,Test,1,Donut/683674.jpg,random
+lot42358,23,683675,Donut,Donut,Test,1,Donut/683675.jpg,Donut
+lot42358,24,683676,none,none,Test,0,,
+lot42358,25,683677,Donut,Donut,Test,1,Donut/683677.jpg,Donut
+lot44187,1,728819,none,none,Test,0,,
+lot44187,2,728820,none,none,Test,0,,
+lot44187,3,728821,none,none,Test,0,,
+lot44187,4,728822,none,none,Test,0,,
+lot44187,5,728823,Near-full,near full,Test,1,near full/728823.jpg,near full
+lot44187,6,728824,none,none,Test,0,,
+lot44187,7,728825,none,none,Test,0,,
+lot44187,8,728826,none,none,Test,0,,
+lot44187,9,728827,none,none,Test,0,,
+lot44187,10,728828,none,none,Test,0,,
+lot44187,11,728829,Near-full,near full,Test,1,near full/728829.jpg,near full
+lot44187,12,728830,none,none,Test,0,,
+lot44187,13,728831,none,none,Test,0,,
+lot44187,14,728832,none,none,Test,0,,
+lot44187,15,728833,none,none,Test,0,,
+lot44187,16,728834,none,none,Test,0,,
+lot44187,17,728835,none,none,Test,0,,
+lot44187,18,728836,none,none,Test,0,,
+lot44187,19,728837,none,none,Test,0,,
+lot44187,20,728838,none,none,Test,0,,
+lot44187,21,728839,none,none,Test,0,,
+lot44187,22,728840,none,none,Test,0,,
+lot44187,23,728841,none,none,Test,0,,
+lot44187,24,728842,none,none,Test,0,,
+lot44187,25,728843,Near-full,near full,Test,1,near full/728843.jpg,near full
+lot45612,1,764022,none,none,Test,0,,
+lot45612,2,764023,none,none,Test,0,,
+lot45612,3,764024,none,none,Test,0,,
+lot45612,4,764025,none,none,Test,0,,
+lot45612,5,764026,Edge-Loc,Edge Local,Test,0,,
+lot45612,6,764027,Edge-Ring,Edge Ring,Test,1,Edge Ring/764027.jpg,Edge Ring
+lot45612,7,764028,Edge-Ring,Edge Ring,Test,1,Edge Ring/764028.jpg,Edge Ring
+lot45612,8,764029,Edge-Ring,Edge Ring,Test,1,Edge Ring/764029.jpg,Edge Ring
+lot45612,9,764030,none,none,Test,0,,
+lot45612,10,764031,Edge-Ring,Edge Ring,Test,1,Edge Ring/764031.jpg,Edge Ring
+lot45612,11,764032,none,none,Test,0,,
+lot45612,12,764033,none,none,Test,0,,
+lot45612,13,764034,none,none,Test,0,,
+lot45612,14,764035,none,none,Test,0,,
+lot45612,15,764036,none,none,Test,0,,
+lot45612,16,764037,none,none,Test,0,,
+lot45612,17,764038,Edge-Ring,Edge Ring,Test,1,Edge Ring/764038.jpg,Edge Ring
+lot45612,18,764039,none,none,Test,0,,
+lot45612,19,764040,none,none,Test,0,,
+lot45612,20,764041,none,none,Test,0,,
+lot45612,21,764042,none,none,Test,0,,
+lot45612,22,764043,none,none,Test,0,,
+lot45612,23,764044,none,none,Test,0,,
+lot45612,24,764045,none,none,Test,0,,
+lot45612,25,764046,none,none,Test,0,,
+lot45626,1,764372,none,none,Test,0,,
+lot45626,2,764373,Center,Center,Test,0,,
+lot45626,3,764374,Center,Center,Test,0,,
+lot45626,4,764375,none,none,Test,0,,
+lot45626,5,764376,Center,Center,Test,0,,
+lot45626,6,764377,Center,Center,Test,1,Center/764377.jpg,Center
+lot45626,7,764378,Center,Center,Test,0,,
+lot45626,8,764379,Center,Center,Test,0,,
+lot45626,9,764380,Center,Center,Test,0,,
+lot45626,10,764381,Center,Center,Test,0,,
+lot45626,11,764382,Center,Center,Test,0,,
+lot45626,12,764383,Center,Center,Test,0,,
+lot45626,13,764384,Edge-Ring,Edge Ring,Test,1,Edge Ring/764384.jpg,Edge Ring
+lot45626,14,764385,Edge-Ring,Edge Ring,Test,1,Edge Ring/764385.jpg,Edge Ring
+lot45626,15,764386,Center,Center,Test,0,,
+lot45626,16,764387,Random,random,Test,1,random/764387.jpg,random
+lot45626,17,764388,Center,Center,Test,0,,
+lot45626,18,764389,Edge-Ring,Edge Ring,Test,1,Edge Ring/764389.jpg,Edge Ring
+lot45626,19,764390,Center,Center,Test,0,,
+lot45626,20,764391,Center,Center,Test,0,,
+lot45626,21,764392,Center,Center,Test,0,,
+lot45626,22,764393,Center,Center,Test,0,,
+lot45626,23,764394,Center,Center,Test,0,,
+lot45626,24,764395,Center,Center,Test,0,,
+lot45626,25,764396,Center,Center,Test,0,,
+lot45644,1,764804,Center,Center,Test,0,,
+lot45644,2,764805,Center,Center,Test,1,Center/764805.jpg,Center
+lot45644,3,764806,Center,Center,Test,0,,
+lot45644,4,764807,Random,random,Test,1,random/764807.jpg,Edge Ring
+lot45644,5,764808,none,none,Test,0,,
+lot45644,6,764809,none,none,Test,0,,
+lot45644,7,764810,none,none,Test,0,,
+lot45644,8,764811,Edge-Loc,Edge Local,Test,0,,
+lot45644,9,764812,Loc,Local,Test,0,,
+lot45644,10,764813,none,none,Test,0,,
+lot45644,11,764814,none,none,Test,0,,
+lot45644,12,764815,none,none,Test,0,,
+lot45644,13,764816,Edge-Ring,Edge Ring,Test,0,,
+lot45644,14,764817,none,none,Test,0,,
+lot45644,15,764818,Center,Center,Test,0,,
+lot45644,16,764819,none,none,Test,0,,
+lot45644,17,764820,none,none,Test,0,,
+lot45644,18,764821,Edge-Ring,Edge Ring,Test,1,Edge Ring/764821.jpg,Edge Ring
+lot45644,19,764822,Edge-Loc,Edge Local,Test,0,,
+lot45644,20,764823,none,none,Test,0,,
+lot45644,21,764824,none,none,Test,0,,
+lot45644,22,764825,none,none,Test,0,,
+lot45644,23,764826,none,none,Test,0,,
+lot45644,24,764827,none,none,Test,0,,
+lot45644,25,764828,Edge-Ring,Edge Ring,Test,1,Edge Ring/764828.jpg,Edge Ring
+lot46104,1,776002,none,none,Test,0,,
+lot46104,2,776003,Random,random,Test,1,random/776003.jpg,random
+lot46104,3,776004,none,none,Test,0,,
+lot46104,4,776005,Random,random,Test,1,random/776005.jpg,random
+lot46104,5,776006,Random,random,Test,1,random/776006.jpg,Center
+lot46104,6,776007,Random,random,Test,1,random/776007.jpg,random
+lot46104,7,776008,none,none,Test,0,,
+lot46104,8,776009,Random,random,Test,1,random/776009.jpg,Center
+lot46104,9,776010,Random,random,Test,1,random/776010.jpg,Center
+lot46104,10,776011,Center,Center,Test,0,,
+lot46104,11,776012,none,none,Test,0,,
+lot46104,12,776013,Random,random,Test,1,random/776013.jpg,random
+lot46104,13,776014,Random,random,Test,1,random/776014.jpg,Center
+lot46104,14,776015,Random,random,Test,1,random/776015.jpg,random
+lot46104,15,776016,none,none,Test,0,,
+lot46104,16,776017,none,none,Test,0,,
+lot46104,17,776018,Random,random,Test,1,random/776018.jpg,Center
+lot46104,18,776019,Random,random,Test,1,random/776019.jpg,random
+lot46104,19,776020,Random,random,Test,1,random/776020.jpg,Center
+lot46104,20,776021,Random,random,Test,1,random/776021.jpg,random
+lot46104,21,776022,Random,random,Test,1,random/776022.jpg,Center
+lot46104,22,776023,Random,random,Test,1,random/776023.jpg,random
+lot46104,23,776024,Random,random,Test,1,random/776024.jpg,Center
+lot46104,24,776025,Random,random,Test,1,random/776025.jpg,random
+lot46104,25,776026,Random,random,Test,1,random/776026.jpg,random
+lot47485,1,810048,Edge-Loc,Edge Local,Test,1,Edge Local/810048.jpg,Edge Local
+lot47485,2,810049,Center,Center,Test,0,,
+lot47485,3,810050,none,none,Test,0,,
+lot47485,4,810051,none,none,Test,0,,
+lot47485,5,810052,none,none,Test,0,,
+lot47485,6,810053,none,none,Test,0,,
+lot47485,7,810054,none,none,Test,0,,
+lot47485,8,810055,Edge-Loc,Edge Local,Test,1,Edge Local/810055.jpg,Edge Local
+lot47485,9,810056,none,none,Test,0,,
+lot47485,10,810057,none,none,Test,0,,
+lot47485,11,810058,none,none,Test,0,,
+lot47485,12,810059,none,none,Test,0,,
+lot47485,13,810060,none,none,Test,0,,
+lot47485,14,810061,Loc,Local,Test,0,,
+lot47485,15,810062,none,none,Test,0,,
+lot47485,16,810063,none,none,Test,0,,
+lot47485,17,810064,none,none,Test,0,,
+lot47485,18,810065,none,none,Test,0,,
+lot47485,19,810066,none,none,Test,0,,
+lot47485,20,810067,Edge-Loc,Edge Local,Test,1,Edge Local/810067.jpg,Edge Local
+lot47485,21,810068,none,none,Test,0,,
+lot47485,22,810069,none,none,Test,0,,
+lot47485,23,810070,none,none,Test,0,,
+lot47485,24,810071,Scratch,Scratch,Test,1,Scratch/810071.jpg,Scratch
+lot47485,25,810072,none,none,Test,0,,
+lot47500,1,810423,none,none,Test,0,,
+lot47500,2,810424,none,none,Test,0,,
+lot47500,3,810425,none,none,Test,0,,
+lot47500,4,810426,none,none,Test,0,,
+lot47500,5,810427,none,none,Test,0,,
+lot47500,6,810428,none,none,Test,0,,
+lot47500,7,810429,none,none,Test,0,,
+lot47500,8,810430,none,none,Test,0,,
+lot47500,9,810431,none,none,Test,0,,
+lot47500,10,810432,none,none,Test,0,,
+lot47500,11,810433,Edge-Loc,Edge Local,Test,1,Edge Local/810433.jpg,Edge Local
+lot47500,12,810434,none,none,Test,0,,
+lot47500,13,810435,none,none,Test,0,,
+lot47500,14,810436,none,none,Test,0,,
+lot47500,15,810437,none,none,Test,0,,
+lot47500,16,810438,none,none,Test,0,,
+lot47500,17,810439,none,none,Test,0,,
+lot47500,18,810440,,라벨 없음,0,0,,
+lot47500,19,810441,Edge-Loc,Edge Local,Test,1,Edge Local/810441.jpg,Edge Ring
+lot47500,20,810442,Edge-Loc,Edge Local,Test,1,Edge Local/810442.jpg,Edge Local
+lot47500,21,810443,Scratch,Scratch,Test,1,Scratch/810443.jpg,Scratch
+lot47500,22,810444,none,none,Test,0,,
+lot47500,23,810445,none,none,Test,0,,
+lot47500,24,810446,none,none,Test,0,,
+lot47500,25,810447,none,none,Test,0,,
+lot47510,1,810673,Edge-Loc,Edge Local,Test,1,Edge Local/810673.jpg,Edge Local
+lot47510,2,810674,Edge-Ring,Edge Ring,Test,0,,
+lot47510,3,810675,none,none,Test,0,,
+lot47510,4,810676,none,none,Test,0,,
+lot47510,5,810677,none,none,Test,0,,
+lot47510,6,810678,none,none,Test,0,,
+lot47510,7,810679,none,none,Test,0,,
+lot47510,8,810680,none,none,Test,0,,
+lot47510,9,810681,Edge-Loc,Edge Local,Test,1,Edge Local/810681.jpg,Edge Local
+lot47510,10,810682,none,none,Test,0,,
+lot47510,11,810683,none,none,Test,0,,
+lot47510,12,810684,Edge-Ring,Edge Ring,Test,0,,
+lot47510,13,810685,none,none,Test,0,,
+lot47510,14,810686,none,none,Test,0,,
+lot47510,15,810687,Edge-Ring,Edge Ring,Test,0,,
+lot47510,16,810688,none,none,Test,0,,
+lot47510,17,810689,none,none,Test,0,,
+lot47510,18,810690,none,none,Test,0,,
+lot47510,19,810691,none,none,Test,0,,
+lot47510,20,810692,none,none,Test,0,,
+lot47510,21,810693,Edge-Ring,Edge Ring,Test,0,,
+lot47510,22,810694,none,none,Test,0,,
+lot47510,23,810695,none,none,Test,0,,
+lot47510,24,810696,Edge-Loc,Edge Local,Test,1,Edge Local/810696.jpg,Edge Local
+lot47510,25,810697,Edge-Ring,Edge Ring,Test,0,,
+lot47511,1,810698,none,none,Test,0,,
+lot47511,2,810699,none,none,Test,0,,
+lot47511,3,810700,none,none,Test,0,,
+lot47511,4,810701,Edge-Loc,Edge Local,Test,1,Edge Local/810701.jpg,Edge Local
+lot47511,5,810702,Loc,Local,Test,0,,
+lot47511,6,810703,none,none,Test,0,,
+lot47511,7,810704,none,none,Test,0,,
+lot47511,8,810705,none,none,Test,0,,
+lot47511,9,810706,Loc,Local,Test,0,,
+lot47511,10,810707,none,none,Test,0,,
+lot47511,11,810708,none,none,Test,0,,
+lot47511,12,810709,none,none,Test,0,,
+lot47511,13,810710,Edge-Loc,Edge Local,Test,1,Edge Local/810710.jpg,Edge Local
+lot47511,14,810711,Edge-Loc,Edge Local,Test,1,Edge Local/810711.jpg,Edge Local
+lot47511,15,810712,none,none,Test,0,,
+lot47511,16,810713,none,none,Test,0,,
+lot47511,17,810714,Edge-Loc,Edge Local,Test,1,Edge Local/810714.jpg,Edge Local
+lot47511,18,810715,Edge-Ring,Edge Ring,Test,0,,
+lot47511,19,810716,none,none,Test,0,,
+lot47511,20,810717,none,none,Test,0,,
+lot47511,21,810718,none,none,Test,0,,
+lot47511,22,810719,none,none,Test,0,,
+lot47511,23,810720,none,none,Test,0,,
+lot47511,24,810721,none,none,Test,0,,
+lot47511,25,810722,none,none,Test,0,,

@@ -1,0 +1,11 @@
+lotName,n_original,n_in_902,pred_flag_06,true_flag_06,repeat_true_k3_in_902,repeat_true_k3_full_lot,new_in_full_lot,top_defect_full_lot,full_Center,full_Donut,full_Edge Local,full_Edge Ring,full_Local,full_Scratch,full_random,full_near full,full_none,full_라벨 없음,in902_Center,in902_Donut,in902_Edge Local,in902_Edge Ring,in902_Local,in902_Scratch,in902_random,in902_near full,in902_none,in902_라벨 없음
+lot42358,25,3,,Donut,Donut,Donut;Edge Local,Edge Local,Edge Local:7,0,3,7,0,0,1,0,0,14,0,0,3,0,0,0,0,0,0,0,0
+lot44187,25,3,near full,near full,near full,near full,,near full:3,0,0,0,0,0,0,0,3,22,0,0,0,0,0,0,0,0,3,0,0
+lot45612,25,5,Edge Ring,Edge Ring,Edge Ring,Edge Ring,,Edge Ring:5,0,0,1,5,0,0,0,0,19,0,0,0,0,5,0,0,0,0,0,0
+lot45626,25,5,Edge Ring,Edge Ring,Edge Ring,Center;Edge Ring,Center,Center:19,19,0,0,3,0,0,1,0,2,0,1,0,0,3,0,0,1,0,0,0
+lot45644,25,4,Edge Ring,,,Center;Edge Ring,Center;Edge Ring,Center:4,4,0,2,3,1,0,1,0,14,0,1,0,0,2,0,0,1,0,0,0
+lot46104,25,18,Center;random,random,random,random,,random:18,1,0,0,0,0,0,18,0,6,0,0,0,0,0,0,0,18,0,0,0
+lot47485,25,4,Edge Local,Edge Local,Edge Local,Edge Local,,Edge Local:3,1,0,3,0,1,1,0,0,19,0,0,0,3,0,0,1,0,0,0,0
+lot47500,25,4,,Edge Local,Edge Local,Edge Local,,Edge Local:3,0,0,3,0,0,1,0,0,20,1,0,0,3,0,0,1,0,0,0,0
+lot47510,25,3,Edge Local,Edge Local,Edge Local,Edge Local;Edge Ring,Edge Ring,Edge Ring:5,0,0,3,5,0,0,0,0,17,0,0,0,3,0,0,0,0,0,0,0
+lot47511,25,4,Edge Local,Edge Local,Edge Local,Edge Local,,Edge Local:4,0,0,4,1,2,0,0,0,18,0,0,0,4,0,0,0,0,0,0,0
