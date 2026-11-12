@@ -1,0 +1,10 @@
+type,n,img_edge8_defect,orig_outermost_die_defect,img_edge8_on_wafer_share
+Center,100,0.44,0.86,0.995
+Donut,102,0.49,0.931,0.994
+Edge Local,103,0.718,0.913,0.996
+Edge Ring,102,0.951,1.0,1.0
+Local,100,0.25,0.81,0.904
+Scratch,100,0.34,0.88,0.92
+near full,95,0.989,1.0,0.983
+none,100,0.96,1.0,1.0
+random,100,0.97,0.99,0.971

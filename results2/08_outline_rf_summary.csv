@@ -1,0 +1,5 @@
+target,features,acc_mean,acc_std_over_fold_seed,macro_f1,chance
+type,basic4,0.2894,0.0366,0.2604,0.1111
+type,basic4+profile64,0.5898,0.0634,0.5666,0.1111
+size_group,basic4,0.4501,0.0429,0.1205,
+size_group,basic4+profile64,0.9529,0.0207,0.5752,
