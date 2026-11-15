@@ -13,7 +13,7 @@ WM-811K 웨이퍼 맵 이미지 (9개 유형, 902장 서브셋)
 
 - 받은 페이지(토론 글): https://www.kaggle.com/datasets/muhammedjunayed/wm811k-silicon-wafer-map-dataset-image/discussion/599874
 - 데이터셋 본 페이지: https://www.kaggle.com/datasets/muhammedjunayed/wm811k-silicon-wafer-map-dataset-image
-- 처음 받은 파일: `C:\Users\허창빈\Downloads\archive.zip` (1,006,403바이트, 902장)
+- 처음 받은 파일: Windows 다운로드 폴더의 `archive.zip` (1,006,403바이트, 902장)
   - SHA-256: `2c21af753f39668d253fd7d2e36e0010b6058224ea443dece77f9f1c150afb6f`
   - 안쪽 폴더 이름: `WM811k_Dataset/`
 - 프로젝트 폴더의 파일: `WM811k Dataset.zip` (1,037,027바이트, 902장)
@@ -26,7 +26,7 @@ WM-811K 웨이퍼 맵 이미지 (9개 유형, 902장 서브셋)
 
 2026-06-23
 
-- 근거: 브라우저 다운로드 기록과 `C:\Users\허창빈\Downloads\archive.zip`의 수정 시각 2026-06-23 16:13(KST).
+- 근거: 브라우저 다운로드 기록과 Windows 다운로드 폴더의 `archive.zip`의 수정 시각 2026-06-23 16:13(KST).
 - 프로젝트 폴더의 `WM811k Dataset.zip`은 수정 시각이 2026-08-26 16:33(KST)인데, 위 파일을 나중에 다시 압축한 사본이에요(2절 참고).
 
 ## 4. 원본 데이터
